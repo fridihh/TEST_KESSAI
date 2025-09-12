@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/ksstyle.css">
+    <link rel="stylesheet" href="/css/res.css">
+    
+</head>
+<body>
+    <header>
+        <h1>　　　</h1>
+        <h2>　　　</h2>
+        <div class="t-box">
+            <p data-target="main1">スケジュール</p>
+            <p data-target="main2">決済</p>
+        </div>
+    </header>
+    <main id="main1" class="calma">
+        <div id='calendar'></div>
+    </main>
+    <main id="main2" class="hidden kema">
+        <article>
+            <h1>決済用QRコード</h1>
+            <img src="/image/QR_517366.png" alt="電卓">
+        </article>
+    </main>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/ja.js'></script>
+    <script type="module"  src="main.js"></script>
+</body>
+</html>

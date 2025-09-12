@@ -1,0 +1,109 @@
+.meme {
+    height: auto;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    .m-h {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        height: 15vh;
+        h1 {
+            grid-area: 1 / 2;
+            font-size: 3rem;
+        }
+        button {
+            grid-area: 1 / 3;
+            flex: 1;
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 30%;
+            cursor: pointer;
+            background: #a8e798;
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto auto auto;
+            box-shadow: 2px 2px 5px black;
+            transition: box-shadow .3s ease;
+            img {
+                width: 2.5vw;
+                height: 2.5vh;
+            }
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+    .m-list {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            padding-block: 1rem;
+            li {
+                width: 95%;
+                margin-inline: auto;
+            }
+            button {
+                background-color: transparent;
+            }
+            li:has(button:hover) {
+                background: linear-gradient(
+                    to bottom,
+                    transparent 70%,
+                    lightgray 100%
+                );
+                box-shadow: 0 1px 0 black;
+            }
+            li:has(button.active) {
+                background: linear-gradient(
+                    to bottom,
+                    transparent 70%,
+                    lightgray 100%
+                );
+                
+                box-shadow: 0 1px 0 black;
+            }
+        }
+        
+    }
+    .m-c {
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            article {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                place-items: center;
+                place-self: center;
+                text-align: center;
+                background-color: white;
+                border: 2px solid black;
+                width: 15vw;
+                height: 35vh;
+                img {
+                    width: 10vw;
+                    height: 10vh;
+                }
+                h1 {
+                    text-align: center;
+                    width: fit-content;
+                    margin-inline: auto;
+                    border-bottom: 2px solid black;
+                }
+                p {
+                    padding-inline: auto;
+                    padding-top: .8rem;
+                }
+            }
+        }
+        .hidden {
+            display: none;
+        }
+    }
+}
+
+
